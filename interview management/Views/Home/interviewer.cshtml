@@ -1,0 +1,309 @@
+﻿
+@{
+    ViewBag.Title = "Interviewer Add";
+}
+
+<!-- Bootstrap CSS -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Bootstrap Icons -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+<style>
+
+    .page-title {
+        font-size: 34px;
+        font-weight: bold;
+        color: #0f172a;
+    }
+
+    .add-btn {
+        background: #2563eb;
+        color: white;
+        border: none;
+        padding: 12px 22px;
+        border-radius: 10px;
+        font-size: 17px;
+        transition: 0.3s;
+    }
+
+        .add-btn:hover {
+            background: #1d4ed8;
+        }
+
+    .interviewer-table {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        padding: 10px;
+    }
+
+    .table th {
+        background: #2563eb;
+        color: white;
+        text-align: center;
+    }
+
+    .table td {
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .modal-header {
+        background: #2563eb;
+        color: white;
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #0f172a;
+    }
+
+    .form-control {
+        height: 48px;
+        border-radius: 10px;
+    }
+
+    .submit-btn {
+        background: #16a34a;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+        .submit-btn:hover {
+            background: #15803d;
+        }
+</style>
+
+<div class="container-fluid">
+
+    <!-- ===== HEADER ===== -->
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <div>
+
+            <h1 class="page-title">
+                Interviewer Add
+            </h1>
+
+            <p class="text-muted">
+                Manage interviewer details
+            </p>
+
+        </div>
+
+        <!-- ADD BUTTON -->
+
+        <button class="add-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#interviewerModal">
+
+            <i class="bi bi-person-workspace"></i>
+
+            Add Interviewer
+
+        </button>
+
+    </div>
+
+    <!-- ===== GRID ===== -->
+
+    <div class="interviewer-table">
+
+        <div class="table-responsive">
+
+            <table id="tblInterviewerList"
+                   class="table table-striped table-bordered">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Interviewer Name</th>
+                        <th>Department</th>
+                        <th>Designation</th>
+                        <th>Mobile Number</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+
+                    </tr>
+
+                </thead>
+
+         
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===== MODAL ===== -->
+
+<div class="modal fade"
+     id="interviewerModal"
+     tabindex="-1"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+
+            <!-- MODAL HEADER -->
+
+            <div class="modal-header">
+
+                <h4 class="modal-title">
+
+                    <i class="bi bi-person-workspace"></i>
+
+                    Add Interviewer
+
+                </h4>
+
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <!-- MODAL BODY -->
+
+            <div class="modal-body">
+
+                <form>
+
+                    <div class="row g-4">
+
+                        <!-- Interviewer Name -->
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+
+                                Interviewer Name
+
+                            </label>
+
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Enter interviewer name" />
+
+                        </div>
+
+                        <!-- Department -->
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+
+                                Department
+
+                            </label>
+
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Enter department" />
+
+                        </div>
+
+                        <!-- Designation -->
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+
+                                Designation
+
+                            </label>
+
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Enter designation" />
+
+                        </div>
+
+                        <!-- Mobile Number -->
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+
+                                Mobile Number
+
+                            </label>
+
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Enter mobile number" />
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+          
+            <!-- MODAL FOOTER -->
+
+            <div class="modal-footer">
+
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
+
+                <button type="button"
+                        class="submit-btn"
+                        onclick="saveInterviewer()">
+
+                    Save Interviewer
+
+                </button>
+
+            </div>
+
+            <script>
+
+                function saveInterviewer() {
+
+                    alert("Interviewer Saved Successfully!");
+
+                    // Close modal
+
+                    var modal = bootstrap.Modal.getInstance(
+                        document.getElementById('interviewerModal')
+                    );
+
+                    modal.hide();
+                }
+
+            </script>
+            
+
+
+        </div>
+
+        </div>
+
+    </div>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

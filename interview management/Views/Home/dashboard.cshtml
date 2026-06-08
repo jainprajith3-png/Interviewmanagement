@@ -1,0 +1,263 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<style>
+
+    .dashboard-container {
+        padding: 20px;
+    }
+
+    .dashboard-title {
+        font-size: 38px;
+        font-weight: bold;
+        color: #0f172a;
+        margin-bottom: 8px;
+    }
+
+    .dashboard-subtitle {
+        color: #64748b;
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+
+    /* ===== DASHBOARD CARDS ===== */
+
+    .dashboard-card {
+        border-radius: 20px;
+        padding: 30px 20px;
+        color: white;
+        transition: 0.3s;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+        height: 220px;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .dashboard-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .dashboard-card i {
+            font-size: 55px;
+            opacity: 0.9;
+        }
+
+        .dashboard-card h2 {
+            margin-top: 18px;
+            font-size: 42px;
+            font-weight: bold;
+        }
+
+        .dashboard-card p {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+    /* ===== CARD COLORS ===== */
+
+    .card-blue {
+        background: linear-gradient(135deg,#2563eb,#1d4ed8);
+    }
+
+    .card-green {
+        background: linear-gradient(135deg,#16a34a,#15803d);
+    }
+
+    .card-purple {
+        background: linear-gradient(135deg,#7c3aed,#6d28d9);
+    }
+
+    .card-red {
+        background: linear-gradient(135deg,#dc2626,#b91c1c);
+    }
+
+    .card-orange {
+        background: linear-gradient(135deg,#f59e0b,#d97706);
+    }
+
+    /* ===== SECTION ===== */
+
+    .section-box {
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        margin-top: 35px;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    }
+
+    .section-title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #0f172a;
+        margin-bottom: 25px;
+    }
+
+    /* ===== QUICK ACTIONS ===== */
+
+    .quick-card {
+        background: linear-gradient(135deg,#0f172a,#1e293b);
+        border-radius: 18px;
+        padding: 25px;
+        color: white;
+        text-align: center;
+        transition: 0.3s;
+        height: 100%;
+    }
+
+        .quick-card:hover {
+            transform: scale(1.03);
+        }
+
+        .quick-card i {
+            font-size: 45px;
+            color: #60a5fa;
+        }
+
+        .quick-card h4 {
+            margin-top: 18px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+    /* ===== TABLE ===== */
+
+    .table th {
+        background: #2563eb;
+        color: white;
+        text-align: center;
+    }
+
+    .table td {
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    /* ===== STATUS BADGES ===== */
+
+    .status-badge {
+        padding: 7px 16px;
+        border-radius: 20px;
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .selected {
+        background: #16a34a;
+    }
+
+    .pending {
+        background: #f59e0b;
+    }
+
+    .rejected {
+        background: #dc2626;
+    }
+</style>
+
+<div class="dashboard-container">
+
+    <!-- ===== PAGE TITLE ===== -->
+
+    <h1 class="dashboard-title">
+        Dashboard
+    </h1>
+
+    <p class="dashboard-subtitle">
+        Welcome to Interview Scheduling Management System
+    </p>
+
+    <!-- ===== DASHBOARD CARDS ===== -->
+
+    <div class="row g-4">
+
+        <!-- Total Candidates -->
+
+        <div class="col-lg-4 col-md-6">
+
+            <div class="dashboard-card card-blue text-center">
+
+                <i class="bi bi-people-fill"></i>
+
+                <h2>0</h2>
+
+                <p>Total Candidates</p>
+
+            </div>
+
+        </div>
+
+        <!-- Scheduled Interviews -->
+
+        <div class="col-lg-4 col-md-6">
+
+            <div class="dashboard-card card-green text-center">
+
+                <i class="bi bi-calendar-check-fill"></i>
+
+                <h2>0</h2>
+
+                <p>Scheduled Interviews</p>
+
+            </div>
+
+        </div>
+
+        <!-- Selected Candidates -->
+
+        <div class="col-lg-4 col-md-6">
+
+            <div class="dashboard-card card-purple text-center">
+
+                <i class="bi bi-check-circle-fill"></i>
+
+                <h2>0</h2>
+
+                <p>Selected Candidates</p>
+
+            </div>
+
+        </div>
+
+        <!-- Rejected Candidates -->
+
+        <div class="col-lg-6 col-md-6">
+
+            <div class="dashboard-card card-red text-center">
+
+                <i class="bi bi-x-circle-fill"></i>
+
+                <h2>0</h2>
+
+                <p>Rejected Candidates</p>
+
+            </div>
+
+        </div>
+
+        <!-- Pending Interviews -->
+
+        <div class="col-lg-6 col-md-6">
+
+            <div class="dashboard-card card-orange text-center">
+
+                <i class="bi bi-hourglass-split"></i>
+
+                <h2>0</h2>
+
+                <p>Pending Interviews</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+   
+
+            </div>
+
+      
